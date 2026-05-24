@@ -87,7 +87,8 @@ const flipCard = (index: number): void => {
 
   flippedIndices.value.push(index)
   cards.value[index].flipped = true
-  soundEffects.play('flip')
+  //commented out until flip sound is found and added in the types
+  // soundEffects.play('flip')
 
   if (flippedIndices.value.length === 2) {
     isProcessing.value = true
