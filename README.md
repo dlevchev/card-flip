@@ -46,7 +46,11 @@ card-flip/
 │       │   ├── no-match.mp3
 │       │   └── win.mp3
 │       └── styles/
-│           └── main.css               # Centralized styles
+│           |── card-styles.css                    # Card component styles
+│           |── game-board-styles.css              # Game board styles
+│           |── grid-size-selector-styles.css      # Grid selector styles
+│           └── main.css                           # Centralized styles
+
 ├── src/
 │   ├── main.ts                        # Vue app initialization with Pinia
 │   ├── style.css                      # Global styles import
@@ -94,7 +98,7 @@ Start the Vite development server:
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`
+The app will be available at `http://localhost:3000`
 
 ### Production Build
 Create an optimized production build:
@@ -251,12 +255,6 @@ Audio utility managing:
 - Mute/unmute functionality
 - Audio playback with error handling
 
-## Browser Support
-
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## Data Persistence
 
@@ -278,10 +276,6 @@ Audio utility managing:
 - **TypeScript** - Type-safe JavaScript
 - **Pinia** - State management
 - **Vite** - Build tool and dev server
-- **CSS Grid** - Responsive card layout
-- **CSS Transforms** - Card flip animations
-- **Web Audio API** - Sound effects
-- **localStorage** - Data persistence
 
 ## Future Enhancements
 
