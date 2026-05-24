@@ -1,4 +1,4 @@
-type SoundType = 'flip' | 'match' | 'mismatch' | 'complete' | 'newRecord'
+type SoundType = 'match' | 'mismatch' | 'complete' | 'newRecord'
 
 class SoundEffects {
   private isMuted: boolean = false
