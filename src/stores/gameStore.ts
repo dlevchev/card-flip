@@ -11,7 +11,7 @@ interface GameScore {
 export const useGameStore = defineStore('game', () => {
   const bestScores = ref<Map<string, GameScore>>(new Map())
   const gameTimer = ref<number>(0)
-  const timerInterval = ref<NodeJS.Timeout | null>(null)
+  const timerInterval = ref<ReturnType<typeof setInterval> | null>(null)
 
   const loadScores = (): void => {
     const stored = localStorage.getItem('memoryGameScores')
