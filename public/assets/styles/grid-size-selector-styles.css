@@ -1,0 +1,159 @@
+
+.selector-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.selector-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+:global(.app.dark-mode) .selector-card {
+  background: #2a2a2a;
+  color: #f0f0f0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.selector-card h2 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 2rem;
+}
+
+:global(.app.dark-mode) .selector-card h2 {
+  color: #f0f0f0;
+}
+
+.description {
+  color: #666;
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+}
+
+:global(.app.dark-mode) .description {
+  color: #aaa;
+}
+
+.grid-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.size-button {
+  flex: 1;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.size-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.size-button:focus {
+  outline: 3px solid #764ba2;
+  outline-offset: 2px;
+}
+
+.size-button:active {
+  transform: translateY(-2px);
+}
+
+.size-number {
+  font-size: 1.5rem;
+}
+
+.size-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.best-scores {
+  border-top: 2px solid #f0f0f0;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+:global(.app.dark-mode) .best-scores {
+  border-top-color: #444;
+}
+
+.best-scores h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+:global(.app.dark-mode) .best-scores h3 {
+  color: #f0f0f0;
+}
+
+.score-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+:global(.app.dark-mode) .score-item {
+  background: #3a3a3a;
+}
+
+.score-grid {
+  font-weight: bold;
+  color: #667eea;
+}
+
+:global(.app.dark-mode) .score-grid {
+  color: #8fa3ff;
+}
+
+.score-details {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+:global(.app.dark-mode) .score-details {
+  color: #aaa;
+}
+
+@media (max-width: 480px) {
+  .selector-card {
+    padding: 1.5rem;
+  }
+
+  .selector-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid-options {
+    flex-direction: column;
+  }
+
+  .size-button {
+    padding: 1rem;
+  }
+}
